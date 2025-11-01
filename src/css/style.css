@@ -1,0 +1,272 @@
+@font-face {
+    font-family: Inter;
+    font-weight: 300;
+    src: local("Inter"),
+        url("/src/fonts/inter-light.woff2") format("woff2"),
+        url("/src/fonts/inter-light.woff") format("woff"),
+        url("/src/fonts/inter-light.svg") format("svg");
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 600;
+    src: local("Inter"),
+        url("/src/fonts/inter-semi-bold.woff2") format("woff2"),
+        url("/src/fonts/inter-semi-bold.woff") format("woff"),
+        url("/src/fonts/inter-light.svg") format("svg");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template:
+        "cell-1 cell-2 cell-2 cell-3 cell-4" 40% "cell-1 cell-2 cell-2 cell-5 cell-6" auto "cell-7 cell-8 cell-9 cell-5 cell-10" 0.5fr / 35.7% 15.6% 12.9% 17.7% 18.1%;
+    background-color: #fff;
+}
+
+.cell-1 {
+    grid-area: cell-1;
+}
+
+.cell-2 {
+    grid-area: cell-2;
+}
+
+.cell-3 {
+    grid-area: cell-3;
+}
+
+.cell-4 {
+    grid-area: cell-4;
+}
+
+.cell-5 {
+    grid-area: cell-5;
+}
+
+.cell-6 {
+    grid-area: cell-6;
+}
+
+.cell-7 {
+    grid-area: cell-7;
+}
+
+.cell-8 {
+    grid-area: cell-8;
+}
+
+.cell-9 {
+    grid-area: cell-9;
+}
+
+.cell-10 {
+    grid-area: cell-10;
+}
+
+.block {
+    position: relative;
+}
+
+.block__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block__text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: inline-block;
+}
+
+.contacts {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+}
+
+.block--red {
+    background-color: #a61c1c;
+}
+
+.block--brown {
+    background-color: #a6806b;
+}
+
+.block--grey {
+    background-color: #828282;
+}
+
+.block__text--slogan {
+    width: 74%;
+    font-size: 18px;
+    font-weight: 300;
+    color: #f2f2f2;
+}
+
+.block__text--title {
+    top: 45%;
+
+    font-size: 64px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.contacts__item {
+    margin-right: 20px;
+}
+
+.contacts__item:last-child {
+    margin-right: 0;
+}
+
+.contacts__link {
+    display: block;
+
+    width: 29px;
+    height: 23px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.contacts__link--instagram {
+    background-image: url("/src/img/instagram.svg");
+}
+
+.contacts__link--phone {
+    background-image: url("/src/img/phone.svg");
+}
+
+.contacts__link--mail {
+    background-image: url("/src/img/mail.svg");
+}
+
+/* ------------------------------------------------  1537 px и более --------------------------------------------- */
+
+@media (width >=1537px) {
+    /* здесь маштабируемость за счет vw, т.к. на большом экране нет надобности маштабировать вручную */
+
+    .block__text--title {
+        font-size: 5vw;
+    }
+
+    .block__text--slogan {
+        font-size: 1.4vw;
+    }
+
+    .contacts__link {
+        width: 2.3vw;
+        height: 1.8vw;
+    }
+
+    .contacts__item {
+        margin-right: 1.6vw;
+    }
+}
+
+/* ------------------------------------------------  1536px - 1201px --------------------------------------------- */
+
+/* @media (max-width: 1536px) {}  и так норм)  */
+
+/* ------------------------------------------------  1200px - 993px ---------------------------------- */
+
+@media (width <=1200px) {
+    .block__text--title {
+        font-size: 50px;
+    }
+
+    .block__text--slogan {
+        font-size: 14px;
+    }
+}
+
+/* ------------------------------------------------  992px - 769px ---------------------------------- */
+
+@media (width <=992px) {
+    .block__text--title {
+        font-size: 40px;
+    }
+
+    .block__text--slogan {
+        font-size: 14px;
+    }
+
+    .contacts__link {
+        width: 20px;
+        height: 16px;
+    }
+
+    .contacts__item {
+        margin-right: 15px;
+    }
+
+}
+
+/* ------------------------------------------------  768px - 459px ---------------------------------- */
+
+@media (width <=768px) {
+    .main {
+        grid-template:
+            "cell-1 cell-2 cell-2" 35% "cell-7 cell-8 cell-9" 15% "cell-3 cell-4 cell-4" 25% "cell-10 cell-6 cell-5" 25% / 50% 25% 25%;
+    }
+
+    .block__text--title {
+        font-size: 36px;
+    }
+
+    .block__text--slogan {
+        font-size: 12px;
+    }
+
+}
+
+/* ------------------------------------------------  460px - 321px ---------------------------------- */
+
+@media (width <=460px) {
+    .block__text--title {
+        font-size: 28px;
+    }
+
+    .block__text--slogan {
+        font-size: 10px;
+    }
+}
+
+/* ------------------------------------------------  320px и менее ---------------------------------- */
+
+@media (width <=320px) {
+    .main {
+        grid-template:
+            "cell-1 cell-1" 0.7fr "cell-2 cell-2" 1fr "cell-7 cell-7" 0.4fr "cell-8 cell-9" 0.4fr "cell-3 cell-4" 0.4fr "cell-5 cell-6" 0.4fr "cell-5 cell-10" 0.4fr/ 50% 50%;
+    }
+
+    .block__text--title {
+        font-size: 38px;
+    }
+
+    .block__text--slogan {
+        font-size: 14px;
+    }
+}
