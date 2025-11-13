@@ -29,48 +29,48 @@ body {
 .main {
     display: grid;
     grid-template:
-        "cell-1 cell-2 cell-2 cell-3 cell-4" 40% "cell-1 cell-2 cell-2 cell-5 cell-6" auto "cell-7 cell-8 cell-9 cell-5 cell-10" 0.5fr / 35.7% 15.6% 12.9% 17.7% 18.1%;
+        "cell-logo-contacts cell-foto-main cell-foto-main cell-foto-3 cell-foto-4" 40% "cell-logo-contacts cell-foto-main cell-foto-main cell-foto-5 cell-color-6" auto "cell-slogan cell-foto-8 cell-color-9 cell-foto-5 cell-foto-10" 0.5fr / 35.7% 15.6% 12.9% 17.7% 18.1%;
     background-color: #fff;
 }
 
-.cell-1 {
-    grid-area: cell-1;
+.cell-logo-contacts {
+    grid-area: cell-logo-contacts;
 }
 
-.cell-2 {
-    grid-area: cell-2;
+.cell-foto-main {
+    grid-area: cell-foto-main;
 }
 
-.cell-3 {
-    grid-area: cell-3;
+.cell-foto-3 {
+    grid-area: cell-foto-3;
 }
 
-.cell-4 {
-    grid-area: cell-4;
+.cell-foto-4 {
+    grid-area: cell-foto-4;
 }
 
-.cell-5 {
-    grid-area: cell-5;
+.cell-foto-5 {
+    grid-area: cell-foto-5;
 }
 
-.cell-6 {
-    grid-area: cell-6;
+.cell-color-6 {
+    grid-area: cell-color-6;
 }
 
-.cell-7 {
-    grid-area: cell-7;
+.cell-slogan {
+    grid-area: cell-slogan;
 }
 
-.cell-8 {
-    grid-area: cell-8;
+.cell-foto-8 {
+    grid-area: cell-foto-8;
 }
 
-.cell-9 {
-    grid-area: cell-9;
+.cell-color-9 {
+    grid-area: cell-color-9;
 }
 
-.cell-10 {
-    grid-area: cell-10;
+.cell-foto-10 {
+    grid-area: cell-foto-10;
 }
 
 .block {
@@ -100,8 +100,6 @@ body {
 
     display: flex;
     justify-content: center;
-
-    list-style-type: none;
 }
 
 .block--red {
@@ -205,6 +203,11 @@ body {
 /* ------------------------------------------------  992px - 769px ---------------------------------- */
 
 @media (width <=992px) {
+  .main{
+    grid-template:
+    "cell-logo-contacts cell-foto-main cell-foto-main cell-foto-3" 25% "cell-logo-contacts cell-foto-main cell-foto-main cell-foto-5" 10% "cell-slogan cell-foto-8 cell-color-9 cell-foto-5" 15% "cell-foto-4 cell-color-6 cell-color-6 cell-foto-10 " 20% / 40% 20% 20% 20%;
+  }
+
     .block__text--title {
         font-size: 40px;
     }
@@ -229,7 +232,7 @@ body {
 @media (width <=768px) {
     .main {
         grid-template:
-            "cell-1 cell-2 cell-2" 35% "cell-7 cell-8 cell-9" 15% "cell-3 cell-4 cell-4" 25% "cell-10 cell-6 cell-5" 25% / 50% 25% 25%;
+            "cell-logo-contacts cell-foto-main cell-foto-main" 35% "cell-slogan cell-foto-8 cell-color-9" 15% "cell-foto-3 cell-foto-4 cell-foto-4" 25% "cell-foto-10 cell-color-6 cell-foto-5" 25% / 50% 25% 25%;
     }
 
     .block__text--title {
@@ -259,7 +262,7 @@ body {
 @media (width <=320px) {
     .main {
         grid-template:
-            "cell-1 cell-1" 0.7fr "cell-2 cell-2" 1fr "cell-7 cell-7" 0.4fr "cell-8 cell-9" 0.4fr "cell-3 cell-4" 0.4fr "cell-5 cell-6" 0.4fr "cell-5 cell-10" 0.4fr/ 50% 50%;
+            "cell-logo-contacts cell-logo-contacts" 0.7fr "cell-foto-main cell-foto-main" 1fr "cell-slogan cell-slogan" 0.4fr "cell-foto-8 cell-color-9" 0.4fr "cell-foto-3 cell-foto-4" 0.4fr "cell-foto-5 cell-color-6" 0.4fr "cell-foto-5 cell-foto-10" 0.4fr/ 50% 50%;
     }
 
     .block__text--title {
